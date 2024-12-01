@@ -1,6 +1,6 @@
 import pandas as pd
 from fastapi import FastAPI, UploadFile, File
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 from typing import List
 from fastapi.encoders import jsonable_encoder
 import pickle
@@ -69,18 +69,18 @@ app = FastAPI()
 
 
 class Item(BaseModel):
-    name: str
-    year: int
-    km_driven: int
-    fuel: str
-    seller_type: str
-    transmission: str
-    owner: str
-    mileage: str
-    engine: str
-    max_power: str
-    torque: str
-    seats: int
+    name: str = Field(example="Maruti Swift Dzire VDI")
+    year: int = Field(example=2014)
+    km_driven: int = Field(example=145500)
+    fuel: str = Field(example="Diesel")
+    seller_type: str = Field(example="Individual")
+    transmission: str = Field(example="Manual")
+    owner: str = Field(example="First Owner")
+    mileage: str = Field(example="23.4 kmpl")
+    engine: str = Field(example="1248 CC")
+    max_power: str = Field(example="74 bhp")
+    torque: str = Field(example="190Nm@ 2000rpm")
+    seats: int = Field(example=5)
 
 def Filling_empty(data):
     col = data.columns
