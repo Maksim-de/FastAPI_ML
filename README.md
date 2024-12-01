@@ -2,7 +2,7 @@
 
 **FastApi** https://fastapi-ml-19qx.onrender.com/docs#/default/predict_item_predict_item_post
 
-Json для тестирования API *predict_item* хранится в файле **test.txt**
+Json для тестирования API *predict_item* хранится в файле **test.txt**\
 CSV для тестирования API *predicts_item* хранится в файле **car.csv**
 
 Этот проект представляет собой разработку и развертывание модели машинного обучения для предсказания стоимости автомобилей.
